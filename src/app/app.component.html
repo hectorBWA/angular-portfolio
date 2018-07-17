@@ -1,20 +1,75 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
 
+<div class="side">
+<h1 class="text" (click)="ShowHomeButton()">Hector Zavala</h1>
+<a href="#" (click)="ShowProjectsButton()">Projects</a><br>
+<a href="#" (click)="ShowContactButton()">Contact</a>
+<br><br><br><br>
+
+<img src="assets/images/wp.png" alt="">
+<img src="assets/images/angular-card.png" alt="">
+<div class="list">
+    <img src="assets/images/new.png" alt="">
+</div>
+</div>
+<div class="content"> 
+  
+  <div class="about" *ngIf="showHome">
+    <h1><i class="fa fa-info-circle" aria-hidden="true"></i> Meet The Coder</h1>
+  <p>My name is Hector Zavala. I am a West Hills College student 
+    majoring in Computer Information Systems. I am also 
+    currently enrolled in the Geekwise Acadamy at
+    Bitwise Industries.
+    <br><br>
+    Connect with me on <a href="https://www.linkedin.com/in/hector-zavala-597690156/">LinkedIn</a> 
+    <br><br>
+    Find my code on 
+    <a href="https://github.com/hectorBWA">Github</a></p> 
+  </div>
+
+  <div class="projects" *ngIf="showProjects">
+    <h1><i class="fa fa-code" aria-hidden="true"></i> Projects and Templates</h1>
+    <img src="assets/images/06.png" alt="">
+    <p><b>Music Project:</b> This is a personal project. Aiming to give a platform to all artists. The opportunity for interviews and featured projects, submit form.</p>
+    <br>
+    <img src="assets/images/04.png" alt="">
+    <p><b>Artist Profile Template:</b> Angular Project. Mobile friendly. Designed to be minimalistic yet promote important parts of an artists life, autoplay video, tour dates, shop and join mailing list options. Close video button.</p>
+<br>
+    <img src="assets/images/05.png" alt="">
+    <p><b>Clothing Brand Template:</b> Single Page angular. Mobile friendly. Clean and minimalistic. Toggle between 3 collections. Overlay pop out for any extra navigation. </p>
+    <br>
+    <img src="assets/images/01.png" alt="">
+    <p><b>Template 1:</b> This is my original portfolio template. Basic HTML and CSS, single page with a fixed header. About and Contact sections on same page. Projects on seperate page.</p>
+    <br>
+
+  </div>
+
+<div class="contact" *ngIf="showContact">
+<h1><i class="fa fa-comments" aria-hidden="true"></i> Contact</h1>
+  <p>If you would like to get in contact with Hector Zavala regarding these templates or anything else code related please fill out the form below.</p>
+  <br>
+  <div class="form-bg">
+  <form action="mailto:example@gmail.com" method="post" enctype="text/plain">
+    
+    Name <br> <input type="text" name="name"><br><br>
+    
+    Email <br> <input type="text" name="name"><br><br>
+    
+    Price Range <br> <input type="text" name="mail" size="10"><br><br>
+    
+    Details <br> <input type="text" name="comment" size="50"><br><br>
+    <input class="send" type="submit" value="Send">
+    </form>
+  </div>
+</div>  
+</div>
+
+<div class="footer">
+    <p>ANGULAR - WORDPRESS<br>HTML - CSS - JAVASCRIPT</p>
+  </div>
+
+</body>
